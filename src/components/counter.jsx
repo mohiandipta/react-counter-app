@@ -36,8 +36,8 @@ class Counter extends Component {
     }
 
 
-    handleIncrement() {
-        return console.log('Increment Clicked');
+    handleIncrement = () => {
+        return console.log('Increment Clicked', this);
     }
 
     getBadgeClasses() {
