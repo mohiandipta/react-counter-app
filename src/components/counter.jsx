@@ -28,13 +28,17 @@ class Counter extends Component {
             <React.Fragment>
                 <img src={this.state.imageURL} alt="" />
                 <span className={this.getBadgeClasses()} style={this.style} >{this.formatCount()}</span>
-                <button className="btn btn-secondary btn-sm">Increment</button>
+                <button onClick={this.handleIncrement} className="btn btn-success btn-sm">Increment</button>
                 {this.renderTags()}
             </React.Fragment >
 
         );
     }
 
+
+    handleIncrement() {
+        return console.log('Increment Clicked');
+    }
 
     getBadgeClasses() {
         let classes = "badge m-2 alert-";
