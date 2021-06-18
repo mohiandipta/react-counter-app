@@ -5,13 +5,19 @@ class Counter extends Component {
         count: 0,
         imageURL: 'https://picsum.photos/200/'
     };
+
+    style = {
+        fontSize: '20px',
+        fontWeight: 'bold',
+        color: "DodgerBlue"
+    }
+
     render() {
         return (
             <React.Fragment>
-                <Badge variant="primary">
-                    <span style={{ color: "DodgerBlue" }} >{this.formatCount()}</span>
-                </Badge>
-                <button>Increment</button>
+                <img src={this.state.imageURL} alt="" />
+                <span className="badge alert m-2" style={this.style} >{this.formatCount()}</span>
+                <button className="btn btn-secondary btn-sm">Increment</button>
             </React.Fragment >
 
         );
